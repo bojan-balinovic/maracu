@@ -1,0 +1,15 @@
+.shop-page {
+    min-height: 100vh;
+}
+
+.shop-item__name {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: white;
+    margin: 1em;
+}
+
+.shop-item__price {
+    margin-bottom: 2em;
+    color: white;
+}
