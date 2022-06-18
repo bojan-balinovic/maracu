@@ -1,0 +1,11 @@
+.social-media-page {
+    height: 100vh;
+}
+
+.social-media-link {
+    padding: 2em;
+}
+
+.social-media-link:hover {
+    border: 1px solid white;
+}

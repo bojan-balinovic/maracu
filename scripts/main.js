@@ -33,4 +33,24 @@ $(document).ready(function() {
             }
         });
     }
+
+    $('.addToCartForm').submit((e) => {
+        e.preventDefault();
+        var form = Object.fromEntries(new FormData(e.target).entries());
+        let storage = JSON.parse(localStorage.getItem('cart') ? localStorage.getItem('cart') : '[]');
+        //console.log(storage.find(e => e.image != form.image))
+        //if (!storage.find(e => e.image != form.image)) {
+        storage.push(form);
+        //  }
+        localStorage.setItem('cart', JSON.stringify(storage));
+        $('#exampleModal').modal('show');
+    })
+    $('#closeModal').click(() => {
+        $('#exampleModal').modal('hide');
+    })
+
+    function addItemToCart(item) {
+
+    }
+
 });

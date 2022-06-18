@@ -11,12 +11,30 @@
     <link href="./css/landing-page.css" rel="stylesheet" />
     <link href="./css/shop.css" rel="stylesheet" />
     <link href="./css/reveal-animation.css" rel="stylesheet" />
+    <link href="./css/social-media-links-page.css" rel="stylesheet" />
+
     <title>Maracu</title>
 </head>
 
 <body>
 
-
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Info</h5>
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Item added to cart.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeModal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -28,6 +46,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./cart.html">Cart</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact us</a>
@@ -42,51 +63,125 @@
         </div>
         <hr class="mt-2 mb-3" />
         <div class="shop-page d-flex align-items-center row">
-            <div class="row justify-content-around">
+            <div class="row justify-content-around merch-section-1">
                 <div class="col-lg-3">
                     <div class="shop-item text-center has-animation animation-rtl" data-delay="0">
-                        <img class="shop-item__image" src="./images/models/model1.png" />
+                        <img class="shop-item__image" src="./images/models/model1.jpg" />
                         <div class="shop-item__name">
-                            MARACU HOODIE - WHITE
+                            MARACU BLOUSE - WHITE
                         </div>
                         <div class="shop-item__price">
                             30.00$
                         </div>
-                        <button class="btn btn-success w-100">
-                            Add to cart
-                        </button>
+                        <form class="addToCartForm">
+                            <input type="hidden" name="name" value="MARACU BLOUSE - WHITE">
+                            <input type="hidden" name="price" value="30">
+                            <input type="hidden" name="image" value="./images/models/model1.jpg">
+                            <button class="btn btn-success w-100" type="submit">
+                                Add to cart
+                            </button>
+                        </form>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="shop-item text-center has-animation animation-rtl" data-delay="0">
-                        <img class="shop-item__image" src="./images/models/model2.png" />
+                        <img class="shop-item__image" src="./images/models/model2.jpg" />
                         <div class="shop-item__name">
-                            MARACU HOODIE - WHITE
+                            MARACU HOODIE - GRAY
                         </div>
                         <div class="shop-item__price">
-                            30.00$
+                            40.00$
                         </div>
-                        <button class="btn btn-success w-100">
-                            Add to cart
-                        </button>
+                        <form class="addToCartForm">
+                            <input type="hidden" name="name" value="MARACU SHIRT - GRAY">
+                            <input type="hidden" name="price" value="40">
+                            <input type="hidden" name="image" value="./images/models/model2.jpg">
+                            <button class="btn btn-success w-100" type="submit">
+                                Add to cart
+                            </button>
+                        </form>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="shop-item text-center has-animation animation-rtl" data-delay="0">
-                        <img class="shop-item__image" src="./images/models/model3.png" />
+                        <img class="shop-item__image" src="./images/models/model3.jpg" />
                         <div class="shop-item__name">
-                            MARACU HOODIE - WHITE
+                            MARACU HOODIE - BLACK
                         </div>
                         <div class="shop-item__price">
-                            30.00$
+                            45.00$
                         </div>
-                        <button class="btn btn-success w-100">
-                            Add to cart
-                        </button>
+                        <form class="addToCartForm">
+                            <input type="hidden" name="name" value="MARACU HOODIE - BLACK">
+                            <input type="hidden" name="price" value="45">
+                            <input type="hidden" name="image" value="./images/models/model3.jpg">
+                            <button class="btn btn-success w-100" type="submit">
+                                Add to cart
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
 
+            <div class="row justify-content-around merch-section-2">
+                <div class="col-lg-3">
+                    <div class="shop-item text-center has-animation animation-rtl" data-delay="0">
+                        <img class="shop-item__image" src="./images/merch/image1.jpg" />
+                        <div class="shop-item__name">
+                            MARACU HOODIE - BLACK
+                        </div>
+                        <div class="shop-item__price">
+                            45.00$
+                        </div>
+                        <form class="addToCartForm">
+                            <input type="hidden" name="name" value="MARACU HOODIE - BLACK">
+                            <input type="hidden" name="price" value="45">
+                            <input type="hidden" name="image" value="./images/merch/image1.jpg">
+                            <button class="btn btn-success w-100" type="submit">
+                                Add to cart
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="shop-item text-center has-animation animation-rtl" data-delay="0">
+                        <img class="shop-item__image" src="./images/merch/image2.jpg" />
+                        <div class="shop-item__name">
+                            MARACU HOODIE - BLACK
+                        </div>
+                        <div class="shop-item__price">
+                            50.00$
+                        </div>
+                        <form class="addToCartForm">
+                            <input type="hidden" name="name" value="" />
+                        </form>
+                        <form class="addToCartForm">
+                            <input type="hidden" name="name" value="MARACU HOODIE - BLACK">
+                            <input type="hidden" name="price" value="50">
+                            <input type="hidden" name="image" value="./images/merch/image2.jpg">
+                            <button class="btn btn-success w-100" type="submit">
+                                Add to cart
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="social-media-page row align-items-center">
+        <div class="row  justify-content-around">
+            <div class="col-lg-1 social-media-link">
+                <img src="./images/socials/youtube.png" />
+            </div>
+            <div class="col-lg-1 social-media-link">
+                <img src="./images/socials/instagram.png" />
+            </div>
+            <div class="col-lg-1  social-media-link">
+                <img src="./images/socials/mail.png" />
+            </div>
+            <div class="col-lg-1 social-media-link">
+                <img src="./images/socials/tiktok.png" />
+            </div>
         </div>
     </div>
     </div>

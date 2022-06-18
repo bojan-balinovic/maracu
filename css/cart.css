@@ -1,0 +1,40 @@
+.shopping-cart-page {
+    height: 90vh;
+}
+
+.shopping-cart {
+    background-color: #636363;
+    padding: 2em;
+}
+
+.shopping-cart-header {}
+
+.shopping-cart-header .lighter-text {
+    color: #636363;
+    font-size: 1.2em;
+}
+
+.shopping-cart-item {
+    margin-bottom: 2em;
+}
+
+.shopping-cart-header .main-color-text {
+    color: white;
+    font-size: 2em;
+}
+
+.shoping-cart-item__image {
+    height: 8em;
+    width: auto;
+}
+
+.item-name {
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.item-price {
+    color: white;
+    font-size: 1.8em;
+}
